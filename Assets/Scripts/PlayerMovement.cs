@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private float swampSpeed;
     [SerializeField] private float rotationSpeed;
     [SerializeField] private float BodySpeed = 5f;
     [SerializeField] private int Gap = 10;
@@ -63,10 +64,31 @@ public class PlayerMovement : MonoBehaviour
             {
                 DecreaseSnake();
             }
-            //else if (BodyParts.Count == 0)
-            //{
-            //    gameManager.gameOver();
-            //}
+        }
+        if (other.gameObject.CompareTag("Dynamite"))
+        {
+            if (BodyParts.Count > 0)
+            {
+                DecreaseSnake();
+            }
+            else if (BodyParts.Count == 0)
+            {
+                gameManager.gameOver();
+            }
+        }
+        if (other.CompareTag("Swamp"))
+        {
+            speed *= swampSpeed;
+            BodySpeed *= swampSpeed;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Swamp"))
+        {
+            speed /= swampSpeed;
+            BodySpeed /= swampSpeed;
         }
     }
 
@@ -88,8 +110,9 @@ public class PlayerMovement : MonoBehaviour
     private void DecreaseSnake()
     {
         GameObject lastPart = BodyParts[BodyParts.Count - 1];
+        GameObject Collider = lastPart.transform.GetChild(0).gameObject;
         BodyParts.Remove(lastPart);
-
+        Collider.SetActive(false);
         StartCoroutine(BodyRemove(lastPart));
     }
 

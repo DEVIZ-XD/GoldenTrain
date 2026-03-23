@@ -8,6 +8,8 @@ TagManager:
   - Water
   - Coal
   - Rock
+  - Dynamite
+  - Swamp
   layers:
   - Default
   - TransparentFX

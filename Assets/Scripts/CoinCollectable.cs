@@ -45,6 +45,15 @@ public class CoinCollectable : MonoBehaviour
             }
         }
 
+        if (other.gameObject.CompareTag("Dynamite"))
+        {
+            if (score > 0)
+            {
+                score--;
+                scoreText.text = "Score " + score.ToString();
+            }
+        }
+
     }
 
 

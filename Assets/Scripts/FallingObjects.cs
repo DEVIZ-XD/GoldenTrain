@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class FallingObjects : MonoBehaviour
 {
-    [SerializeField] GameObject rock;
+    [SerializeField] GameObject fallingObject;
 
     private void Start()
     {
@@ -13,6 +13,6 @@ public class FallingObjects : MonoBehaviour
     private void SpawnObject()
     {
         Vector3 position = new Vector3(Random.Range(-18, 18), 50, Random.Range(-18, 18));
-        Instantiate(rock, position, Quaternion.identity);
+        Instantiate(fallingObject, position, Quaternion.identity);
     }
 }
