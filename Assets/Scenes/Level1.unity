@@ -541,6 +541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gold_1
       objectReference: {fileID: 0}
+    - target: {fileID: 7481325990701906445, guid: 4d9703453e9ac5b4e88475975c28c263, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2faa9c22efc748a44aa001362964608e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1353,7 +1357,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5000
+  m_ColorTemperature: 4066
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -1372,13 +1376,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.67206484, y: -0.25744325, z: 0.026654817, w: 0.69378775}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 71.132, y: -96.373, z: -72.873}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2048,6 +2052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: back_train_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8488407967839805964, guid: ef0b62ca8893598488dd9d9c054b62cb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2faa9c22efc748a44aa001362964608e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2761,6 +2769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: back_train_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8488407967839805964, guid: ef0b62ca8893598488dd9d9c054b62cb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2faa9c22efc748a44aa001362964608e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4096,6 +4108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: back_train_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8488407967839805964, guid: ef0b62ca8893598488dd9d9c054b62cb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2faa9c22efc748a44aa001362964608e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4900,6 +4916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gold_3
       objectReference: {fileID: 0}
+    - target: {fileID: 7481325990701906445, guid: 4d9703453e9ac5b4e88475975c28c263, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2faa9c22efc748a44aa001362964608e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5810,7 +5830,7 @@ RectTransform:
   m_GameObject: {fileID: 1625177944}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.4739, y: 9.777708, z: 4.4739}
+  m_LocalScale: {x: 2.0518796, y: 4.4843826, z: 2.0518796}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 903406853}
@@ -5822,7 +5842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -762, y: -61}
+  m_AnchoredPosition: {x: -894, y: -266}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1625177946
@@ -6907,6 +6927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: back_train_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8488407967839805964, guid: ef0b62ca8893598488dd9d9c054b62cb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2faa9c22efc748a44aa001362964608e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7373,6 +7397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gold_2
       objectReference: {fileID: 0}
+    - target: {fileID: 7481325990701906445, guid: 4d9703453e9ac5b4e88475975c28c263, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2faa9c22efc748a44aa001362964608e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7928,6 +7956,10 @@ PrefabInstance:
       propertyPath: degreeSlider
       value: 
       objectReference: {fileID: 1625177946}
+    - target: {fileID: 6369862876663795359, guid: 593b45cc8a5ffb244810cb81e9c7e97e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2faa9c22efc748a44aa001362964608e, type: 2}
     - target: {fileID: 8404312592649713498, guid: 593b45cc8a5ffb244810cb81e9c7e97e, type: 3}
       propertyPath: m_Constraints
       value: 84
@@ -8021,6 +8053,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1441039809128001888, guid: 12e661e892626a94599a820fb7ec7246, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2faa9c22efc748a44aa001362964608e, type: 2}
     - target: {fileID: 8179992008713725526, guid: 12e661e892626a94599a820fb7ec7246, type: 3}
       propertyPath: m_Name
       value: Coin
