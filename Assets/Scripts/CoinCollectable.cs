@@ -10,6 +10,8 @@ public class CoinCollectable : MonoBehaviour
     [SerializeField] Slider degreeSlider;
     [SerializeField] private float waterDegree = 20f;
     [SerializeField] private float coalDegree = 20f;
+    [SerializeField] private float minDistance = -18f;
+    [SerializeField] private float maxDistance = 18f;
 
 
     private void OnTriggerEnter(Collider other)
@@ -18,21 +20,21 @@ public class CoinCollectable : MonoBehaviour
         {
             score++;
             scoreText.text = "Score " + score.ToString();
-            var position = new Vector3(Random.Range(-18, 18), 6, Random.Range(-18, 18));
+            var position = new Vector3(Random.Range(minDistance, maxDistance), 6, Random.Range(minDistance, maxDistance));
             other.transform.position = position;
         }
 
         if (other.gameObject.CompareTag("Water"))
         {
             degreeSlider.value -= waterDegree;
-            var position = new Vector3(Random.Range(-18, 18), 6, Random.Range(-18, 18));
+            var position = new Vector3(Random.Range(minDistance, maxDistance), 6, Random.Range(minDistance, maxDistance));
             other.transform.position = position;
         }
 
         if (other.gameObject.CompareTag("Coal"))
         {
             degreeSlider.value += coalDegree;
-            var position = new Vector3(Random.Range(-18, 18), 6, Random.Range(-18, 18));
+            var position = new Vector3(Random.Range(minDistance, maxDistance), 6, Random.Range(minDistance, maxDistance));
             other.transform.position = position;
         }
 
