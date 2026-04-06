@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.Rendering;
+
 
 public class Dynamite : MonoBehaviour
 {
@@ -14,10 +13,11 @@ public class Dynamite : MonoBehaviour
     [SerializeField] Color endColor = new Color(1f, 0f, 0f, 0.3f);
 
     [SerializeField] private float speed = 1f;
+    SFXManager soundManager;
 
     private void Awake()
     {
-        
+        soundManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
     }
 
     private void Start()
@@ -50,17 +50,18 @@ public class Dynamite : MonoBehaviour
         collider.SetActive(true);
         GameObject explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
         ParticleSystem ps = explosion.GetComponent<ParticleSystem>();
+        soundManager.PlayDynamite();
         Destroy(explosion, 1f);
-        Destroy(gameObject, 0.1f);
+        Destroy(transform.parent.gameObject, 0.1f);
     }
 
     private void ObjectDestroyerPlayer()
     {
-        collider.SetActive(true);
         GameObject explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
         ParticleSystem ps = explosion.GetComponent<ParticleSystem>();
+        soundManager.PlayDynamite();
         Destroy(explosion, 1f);
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject, 0.1f);
     }
 
     private void RadiusBlink()

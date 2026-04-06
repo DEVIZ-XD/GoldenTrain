@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CoinCollectable coin;
     [SerializeField] private float winScore;
 
+    private bool isOver = false;
+
     private void Start()
     {
         Time.timeScale = 1f;
@@ -34,12 +36,14 @@ public class GameManager : MonoBehaviour
     }
     public void gameOver()
     {
+        isOver = true;
         gameOverUI.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void Win()
     {
+        isOver = true;
         GetPreferences();
         WinUI.SetActive(true);
         Time.timeScale = 0f;
@@ -47,12 +51,16 @@ public class GameManager : MonoBehaviour
 
     public void StopGame()
     {
-        stopMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+        if (!isOver)
+        {
+            stopMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 
     public void ResumeGame()
     {
+        isOver = false;
         stopMenuUI.SetActive(false);
         Time.timeScale = 1f;
     }

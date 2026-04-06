@@ -3,10 +3,17 @@ using System.Collections;
 
 public class ObjectDestroy : MonoBehaviour
 {
+    SFXManager soundManager;
+
+    private void Awake()
+    {
+        soundManager = GameObject.Find("SFXManager").GetComponent<SFXManager>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Respawn"))
         {
+            soundManager.PlayRock();
             StartCoroutine("ObjectDestroyer");
         }
     }
@@ -14,6 +21,6 @@ public class ObjectDestroy : MonoBehaviour
     IEnumerator ObjectDestroyer()
     {
         yield return new WaitForSeconds(4f);
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 }
